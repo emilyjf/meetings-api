@@ -1,4 +1,4 @@
-class V1::MeetingsController < ApplicationController
+class Api::V2::MeetingsController < ApplicationController
   def index
     @meetings = Meeting.all
   end
@@ -19,7 +19,7 @@ class V1::MeetingsController < ApplicationController
     @meeting = Meeting.patch(date: params[:time])
   end
 
-  def delete
+  def destroy
     @meeting = Meeting.find(params[:id])
     @meeting = Meeting.destroy(params[:id])
   end
