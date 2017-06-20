@@ -1,0 +1,11 @@
+<div id="app">
+<h2>Add a Meeting: </h2>
+<div>
+  Date: <input type="integer" v-model="newMeetingDate">
+  Id: <input type="integer" v-model="newMeetingId">
+  <button v-on:click="addMeeting()">Add Meeting</button>
+  </div>
+
+    <div v-for="meeting in meeting">
+      <h2 v-on:click="toggleMeeting(meeting)">{{ meeting.date }}</h2>
+      <h2 v-if="meeting."

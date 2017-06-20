@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  namespace :api do
-    
+  namespace :api do   
     namespace :v1 do
+      get '/' => 'meetings#index'
       get '/meetings' => 'meetings#index'
       post '/meetings' => 'meetings#create'
       get '/meetings/:id' => 'meetings#show'
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
 
     namespace :v2 do
+      get '/' => 'meetings#index'
       get '/meetings' => 'meetings#index'
       post '/meetings' => 'meetings#create'
       get '/meetings/:id' => 'meetings#show'

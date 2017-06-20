@@ -5,6 +5,15 @@
 //= require_self
 //= require_tree ./channels
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    }
+  });
+});
+
 (function() {
   this.App || (this.App = {});
 
