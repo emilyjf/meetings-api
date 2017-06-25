@@ -1,0 +1,24 @@
+<h2>Add a Meeting: </h2>
+<ul>
+  <li v-for="error in errors">{{ error }}</li>
+</ul>
+<div>
+  Date: <input type="integer" v-model="newMeetingDate">
+  Id: <input type="integer" v-model="newMeetingId">
+  <button v-on:click="addMeeting()">Add Meeting</button>
+</div>
+
+<div>
+  Search by Name: <input type="text" v-model="nameFilter">
+</div>
+
+  <div v-for="meeting in meeting" v-if="isValidMeeting(meeting)">
+    <h2 v-on:click="toggleId(meeting)">{{ meeting.id }}</h2>
+    <h2 v-if="meeting.idVisible">
+      {{ meeting.id }}
+      <button v-on:click="deleteMeeting(meeting)">delete</button>
+    </h2>
+  </div>
+    <h4>Total number of meetings: {{ meetings.length }}</h4>
+</div>
+

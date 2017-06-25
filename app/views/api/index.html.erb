@@ -8,4 +8,11 @@
 
     <div v-for="meeting in meeting">
       <h2 v-on:click="toggleMeeting(meeting)">{{ meeting.date }}</h2>
-      <h2 v-if="meeting."
+      <h2 v-if="meeting.idVisible">
+        {{ meeting.id }}
+        <button v-on:click="deleteMeeting(meeting)">delete</button>
+      </h2>
+    </div>
+
+    <h4>Total number of meetings: {{ meetings.length }}</h4>
+  </div>

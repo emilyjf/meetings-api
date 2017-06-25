@@ -1,5 +1,8 @@
   class Meeting
     attr_accessor :id, :date
+    validates :date, presence: true
+    validates :id, presence: true
+    
     def inititialize(hash_options)
       @id = hash_options["id"]
       @date = Date.parse(hash_options["date"]) if hash_options["date"]
